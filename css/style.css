@@ -1,0 +1,236 @@
+:root,
+:root.theme-1 {
+  --bg-color: #3a4764;
+  --text-color: #fff;
+  --key-color: #3a4764;
+  --key-bg-color: #eae3dc;
+  --key-bg-shadow: #b4a597;
+  --display-color: #182034;
+  --groove-color: #232c43;
+  --key-groove-bg: #232c43;
+  --reset-key-bg: #637097;
+  --reset-key-shadow: #404e72;
+  --reset-key-text: #fff;
+  --result-key-bg: #d03f2f;
+  --result-key-shadow: #93261a;
+  --result-key-text: #fff;
+}
+
+:root.theme-2 {
+  --bg-color: #e6e6e6;
+  --text-color: #35352c;
+  --key-color: #35352c;
+  --key-bg-color: #e5e4e1;
+  --key-bg-shadow: #a69d91;
+  --display-color: #ededed;
+  --groove-color: #d1cccc;
+  --key-groove-bg: #d1cccc;
+  --reset-key-bg: #377f86;
+  --reset-key-shadow: #1b5f65;
+  --reset-key-text: #fff;
+  --result-key-bg: #d03f2f;
+  --result-key-shadow: #93261a;
+  --result-key-text: #fff;
+}
+
+:root.theme-3 {
+  --bg-color: #160628;
+  --text-color: #ffe53d;
+  --key-color: #ffe53d;
+  --key-bg-color: #341c4f;
+  --key-bg-shadow: #871c9c;
+  --display-color: #1d0934;
+  --groove-color: #1d0934;
+  --key-groove-bg: #1d0934;
+  --reset-key-bg: #58077d;
+  --reset-key-shadow: #bc15f4;
+  --reset-key-text: #fff;
+  --result-key-bg: #00e0d1;
+  --result-key-shadow: #6cf9f2;
+  --result-key-text: #1b2428;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Spartan, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.5s ease;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  min-width: 40vw;
+  min-height: 80vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header ul {
+  list-style-type: none;
+  margin: auto 0 0 0;
+  padding: auto 0 0 0;
+}
+
+header ul li {
+  display: inline;
+}
+
+.themes {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-text {
+  font-size: 1rem;
+  padding-top: 15%;
+  margin-left: 15%;
+}
+
+.theme-select {
+  width: 40%;
+  margin: auto 10%;
+}
+
+.theme-select-slider {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 35px;
+  border-radius: 15px;
+  background-color: var(--groove-color);
+  position: relative;
+}
+
+.theme-select-text {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  font-size: 1.2rem;
+  margin-bottom: 10%;
+  transition: all 0.5s ease;
+}
+
+.theme-select-slider input[type="radio"] {
+  height: 50%;
+  width: 50%;
+  margin-bottom: 5px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.theme-slider {
+  background-color: var(--result-key-bg);
+  width: 30%;
+  height: 70%;
+  border-radius: 100%;
+  position: absolute;
+  transition: all 0.5s ease;
+}
+
+#theme-1:checked ~ .theme-slider {
+  left: 10%;
+}
+
+#theme-2:checked ~ .theme-slider {
+  left: 35%;
+}
+
+#theme-3:checked ~ .theme-slider {
+  left: 60%;
+}
+
+.display {
+  width: 100%;
+  height: 12vh;
+  margin: 1% 0 2.5% 0;
+  border-radius: 0.7em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--display-color);
+}
+
+.display-text {
+  text-align: right;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  padding-right: 2.5%;
+}
+
+.calc-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 60px;
+  gap: 0.75rem;
+  padding: 2%;
+  background-color: var(--key-groove-bg);
+  border-radius: 10px;
+}
+
+#reset-key {
+  grid-column: 1/3;
+}
+
+#reset-key .key-btn {
+  background-color: var(--reset-key-bg);
+  box-shadow: 0 5px var(--reset-key-shadow);
+  color: var(--reset-key-text);
+}
+
+#calc-key {
+  grid-column: 3/5;
+}
+
+#calc-key .key-btn {
+  background-color: var(--result-key-bg);
+  box-shadow: 0 5px var(--result-key-shadow);
+  color: var(--result-key-text);
+}
+
+.key-btn {
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+  border-radius: 7px;
+  border: none;
+  background-color: var(--key-bg-color);
+  box-shadow: 0 5px var(--key-bg-shadow);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--key-color);
+}
+
+.key-btn:active {
+  box-shadow: none !important;
+  filter: brightness(85%) !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    min-width: 90vw;
+    min-height: auto;
+    padding: 2.5% 0;
+  }
+
+  .themes {
+    width: 60%;
+  }
+  .calc-keys {
+    grid-auto-rows: 50px;
+  }
+  .display {
+    width: 100%;
+    height: 10vh;
+  }
+}

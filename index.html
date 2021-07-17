@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Reddy Uppathi, Web Developer" />
+    <meta name="description" content="html. css, javascript , tip Calculator" />
+
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="https://popvictoria73.github.io/assets/img/profile.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+          <h1>Calc</h1>
+          <div class="themes">
+            <div class="theme-text">Theme</div>
+            <div class="theme-select">
+              <div>
+                <ul class="theme-select-text">
+                  <li><label for="theme-1">1</label></li>
+                  <li><label for="theme-2">2</label></li>
+                  <li><label for="theme-3">3</label></li>
+                </ul>
+              </div>
+              <div class="theme-select-slider">
+                <input type="radio" name="theme" checked="checked" id="theme-1" />
+                <input type="radio" name="theme" id="theme-2" />
+                <input type="radio" name="theme" id="theme-3" />
+                <div class="theme-slider"></div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="display">
+          <div class="display-text"></div>
+        </div>
+        <div class="calc-keys">
+          <div class="keys">
+            <button class="key-btn" id="7" value="7">7</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="8" value="8">8</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="9" value="9">9</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="del" value="DEL">Delete</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="4" value="4">4</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="5" value="5">5</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="6" value="6">6</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="plus" value="+">+</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="3" value="3">3</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="2" value="2">2</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="1" value="1">1</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="minus" value="-">-</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="decimal" value=".">.</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="0" value="0">0</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="divide" value="/">/</button>
+          </div>
+          <div class="keys">
+            <button class="key-btn" id="multiply" value="*">X</button>
+          </div>
+          <div class="keys" id="reset-key">
+            <button class="key-btn" id="reset" value="reset">Reset</button>
+          </div>
+          <div class="keys" id="calc-key">
+            <button class="key-btn" id="calculate" value="=">=</button>
+          </div>
+        </div>
+      </div>
+        <script src="./js/main.js" defer></script>
+</body>
+
+</html>
